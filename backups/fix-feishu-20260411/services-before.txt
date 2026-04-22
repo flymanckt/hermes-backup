@@ -1,0 +1,4 @@
+  hermes-gateway-consulting.service loaded active   running Hermes Agent Gateway - Messaging Platform Integration
+  hermes-gateway-docs.service       loaded active   running Hermes Agent Gateway - Messaging Platform Integration
+  hermes-gateway-finance.service    loaded active   running Hermes Agent Gateway - Messaging Platform Integration
+  hermes-gateway.service            loaded active   running Hermes Agent Gateway - Messaging Platform Integration

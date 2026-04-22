@@ -199,10 +199,11 @@ approvals:
   timeout: 60
 command_allowlist:
 - script execution via -e/-c flag
-- =command:5de4afe16c87ca74
 - =command:b77fec7bd52b6cd0
+- =command:5de4afe16c87ca74
 - start gateway outside systemd (use 'systemctl --user restart hermes-gateway')
 - /usr/bin/curl
+- recursive delete
 quick_commands: {}
 personalities: {}
 security:
