@@ -1,0 +1,55 @@
+{
+  "batch_id": "batch_790d6576b37b",
+  "created_at": "2026-04-20T13:00:21.545726+00:00",
+  "updated_at": "2026-04-20T13:04:23.911852+00:00",
+  "site": "51job",
+  "site_display_name": "前程无忧",
+  "resume_path": "/mnt/d/简历/陈凯特的简历.pdf",
+  "filters": {
+    "keywords": [
+      "IT经理",
+      "项目经理",
+      "信息化负责人",
+      "数字化经理"
+    ],
+    "city": "深圳",
+    "salary_min": 30000,
+    "salary_max": 40000
+  },
+  "search_url": "https://we.51job.com/pc/search?keyword=IT%E7%BB%8F%E7%90%86+OR+%E9%A1%B9%E7%9B%AE%E7%BB%8F%E7%90%86+OR+%E4%BF%A1%E6%81%AF%E5%8C%96%E8%B4%9F%E8%B4%A3%E4%BA%BA+OR+%E6%95%B0%E5%AD%97%E5%8C%96%E7%BB%8F%E7%90%86&jobArea=%E6%B7%B1%E5%9C%B3&providesalary=30000-40000",
+  "jobs": [
+    {
+      "job_url": "https://jobs.51job.com/shenzhen-baq/170287925.html?s=sou_sou_soulb&t=0_1&req=50c521985beab8565ec2044bc8c9dd9d",
+      "company": "深圳市芸卓新材料科技有限公司",
+      "title": "IT经理",
+      "status": "blocked",
+      "notes": "打开职位详情时触发滑块验证，当前浏览器工具无法完成拖拽验证",
+      "added_at": "2026-04-20T13:03:16.151992+00:00",
+      "updated_at": "2026-04-20T13:04:23.911833+00:00"
+    },
+    {
+      "job_url": "https://jobs.51job.com/shenzhen-nsq/171580891.html?s=sou_sou_soulb&t=0_1&req=47f59992481f59a6d49d88660ae46747",
+      "company": "深圳看到科技有限公司",
+      "title": "项目经理",
+      "status": "pending",
+      "notes": "深圳·南山区；51job 搜索结果",
+      "added_at": "2026-04-20T13:03:16.151997+00:00"
+    },
+    {
+      "job_url": "https://jobs.51job.com/shenzhen-nsq/171388718.html?s=sou_sou_soulb&t=0_1&req=f2f296812e7591fdd1df6dbcd7465bbc",
+      "company": "合肥正和心人力资源管理有限公司",
+      "title": "数字化经理/总监",
+      "status": "pending",
+      "notes": "深圳·南山区；51job 搜索结果",
+      "added_at": "2026-04-20T13:03:16.152003+00:00"
+    },
+    {
+      "job_url": "https://jobs.51job.com/shenzhen/169500160.html?s=sou_sou_soulb&t=0_1&req=f2f296812e7591fdd1df6dbcd7465bbc",
+      "company": "深圳天邦达数字能源股份有限公司",
+      "title": "大项目经理 - 储能电池管理系统（BMS）",
+      "status": "pending",
+      "notes": "深圳；51job 搜索结果",
+      "added_at": "2026-04-20T13:03:16.152006+00:00"
+    }
+  ]
+}

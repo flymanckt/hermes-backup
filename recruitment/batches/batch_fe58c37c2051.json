@@ -1,0 +1,21 @@
+{
+  "batch_id": "batch_fe58c37c2051",
+  "created_at": "2026-04-20T13:00:19.511742+00:00",
+  "updated_at": "2026-04-20T13:00:19.511758+00:00",
+  "site": "boss",
+  "site_display_name": "BOSS直聘",
+  "resume_path": "/mnt/d/简历/陈凯特的简历.pdf",
+  "filters": {
+    "keywords": [
+      "IT经理",
+      "项目经理",
+      "信息化负责人",
+      "数字化经理"
+    ],
+    "city": "深圳",
+    "salary_min": 30000,
+    "salary_max": 40000
+  },
+  "search_url": "https://www.zhipin.com/web/geek/job?query=IT%E7%BB%8F%E7%90%86+OR+%E9%A1%B9%E7%9B%AE%E7%BB%8F%E7%90%86+OR+%E4%BF%A1%E6%81%AF%E5%8C%96%E8%B4%9F%E8%B4%A3%E4%BA%BA+OR+%E6%95%B0%E5%AD%97%E5%8C%96%E7%BB%8F%E7%90%86&city=%E6%B7%B1%E5%9C%B3&salary=30000-40000",
+  "jobs": []
+}

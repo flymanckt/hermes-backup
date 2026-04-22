@@ -1,0 +1,241 @@
+{
+  "batch_id": "batch_21d6f896cdc7",
+  "created_at": "2026-04-20T14:33:18.952785+00:00",
+  "updated_at": "2026-04-20T14:38:03.697739+00:00",
+  "site": "liepin",
+  "site_display_name": "猎聘",
+  "resume_path": "/mnt/d/简历/陈凯特的简历.pdf",
+  "filters": {
+    "keywords": [
+      "IT经理",
+      "信息化负责人",
+      "项目经理",
+      "数字化经理"
+    ],
+    "city": "深圳",
+    "salary_min": 25000,
+    "salary_max": 40000
+  },
+  "search_url": "https://www.liepin.com/zhaopin/?key=IT%E7%BB%8F%E7%90%86+OR+%E4%BF%A1%E6%81%AF%E5%8C%96%E8%B4%9F%E8%B4%A3%E4%BA%BA+OR+%E9%A1%B9%E7%9B%AE%E7%BB%8F%E7%90%86+OR+%E6%95%B0%E5%AD%97%E5%8C%96%E7%BB%8F%E7%90%86&city=%E6%B7%B1%E5%9C%B3&salary=25000_40000",
+  "jobs": [
+    {
+      "job_url": "https://www.liepin.com/job/1981836493.shtml",
+      "company": "",
+      "title": "商业 IT 项目经理 / 业务分析师-英语流利",
+      "status": "skipped",
+      "notes": "工作地点上海，不符合深圳要求",
+      "added_at": "2026-04-20T14:34:20.312843+00:00",
+      "updated_at": "2026-04-20T14:35:12.312873+00:00"
+    },
+    {
+      "job_url": "https://www.liepin.com/job/1978090501.shtml",
+      "company": "",
+      "title": "IT总监",
+      "status": "skipped",
+      "notes": "工作地点武汉-洪山区，不符合深圳要求",
+      "added_at": "2026-04-20T14:34:20.312850+00:00",
+      "updated_at": "2026-04-20T14:37:46.772398+00:00"
+    },
+    {
+      "job_url": "https://www.liepin.com/job/1981891075.shtml",
+      "company": "",
+      "title": "资深基础设施与安全经理（团队负责人）",
+      "status": "skipped",
+      "notes": "工作地点北京-朝阳区，不符合深圳要求",
+      "added_at": "2026-04-20T14:34:20.312855+00:00",
+      "updated_at": "2026-04-20T14:38:03.697715+00:00"
+    },
+    {
+      "job_url": "https://www.liepin.com/job/1964600037.shtml",
+      "company": "",
+      "title": "IT Manager/Supervisor IT经理/主管",
+      "status": "pending",
+      "notes": "",
+      "added_at": "2026-04-20T14:34:20.312859+00:00"
+    },
+    {
+      "job_url": "https://www.liepin.com/job/1981359355.shtml",
+      "company": "",
+      "title": "Senior IT Manager – Applications IT 高级经理 – 应用系统",
+      "status": "pending",
+      "notes": "",
+      "added_at": "2026-04-20T14:34:20.312863+00:00"
+    },
+    {
+      "job_url": "https://www.liepin.com/job/1976450469.shtml",
+      "company": "",
+      "title": "IT经理/IT Manager",
+      "status": "pending",
+      "notes": "",
+      "added_at": "2026-04-20T14:34:20.312867+00:00"
+    },
+    {
+      "job_url": "https://www.liepin.com/job/1929047575.shtml",
+      "company": "",
+      "title": "IT Manager (IT经理）",
+      "status": "pending",
+      "notes": "",
+      "added_at": "2026-04-20T14:34:20.312870+00:00"
+    },
+    {
+      "job_url": "https://www.liepin.com/job/1981576897.shtml",
+      "company": "",
+      "title": "IT Project Manager IT项目经理",
+      "status": "pending",
+      "notes": "",
+      "added_at": "2026-04-20T14:34:20.312880+00:00"
+    },
+    {
+      "job_url": "https://www.liepin.com/job/1978998235.shtml",
+      "company": "",
+      "title": "IT项目经理 - 销售/售后系统 IT Project Manager - MSS",
+      "status": "pending",
+      "notes": "",
+      "added_at": "2026-04-20T14:34:20.312885+00:00"
+    },
+    {
+      "job_url": "https://www.liepin.com/job/1959755349.shtml",
+      "company": "",
+      "title": "IT Application Manager(IT 应用系统经理）",
+      "status": "pending",
+      "notes": "",
+      "added_at": "2026-04-20T14:34:20.312889+00:00"
+    },
+    {
+      "job_url": "https://www.liepin.com/job/1980300981.shtml",
+      "company": "",
+      "title": "Global Retail Company-Sr IT Manager",
+      "status": "pending",
+      "notes": "",
+      "added_at": "2026-04-20T14:34:20.312892+00:00"
+    },
+    {
+      "job_url": "https://www.liepin.com/job/1981690407.shtml",
+      "company": "",
+      "title": "IT经理",
+      "status": "pending",
+      "notes": "",
+      "added_at": "2026-04-20T14:34:20.312896+00:00"
+    },
+    {
+      "job_url": "https://www.liepin.com/job/1981590433.shtml",
+      "company": "",
+      "title": "IT经理",
+      "status": "pending",
+      "notes": "",
+      "added_at": "2026-04-20T14:34:20.312899+00:00"
+    },
+    {
+      "job_url": "https://www.liepin.com/job/1981765305.shtml",
+      "company": "",
+      "title": "IT经理",
+      "status": "pending",
+      "notes": "",
+      "added_at": "2026-04-20T14:34:20.312902+00:00"
+    },
+    {
+      "job_url": "https://www.liepin.com/job/1981687825.shtml",
+      "company": "",
+      "title": "IT经理",
+      "status": "pending",
+      "notes": "",
+      "added_at": "2026-04-20T14:34:20.312905+00:00"
+    },
+    {
+      "job_url": "https://www.liepin.com/job/1981648661.shtml",
+      "company": "",
+      "title": "IT经理",
+      "status": "pending",
+      "notes": "",
+      "added_at": "2026-04-20T14:34:20.312913+00:00"
+    },
+    {
+      "job_url": "https://www.liepin.com/job/1981678153.shtml",
+      "company": "",
+      "title": "IT经理",
+      "status": "pending",
+      "notes": "",
+      "added_at": "2026-04-20T14:34:20.312921+00:00"
+    },
+    {
+      "job_url": "https://www.liepin.com/job/1981677775.shtml",
+      "company": "",
+      "title": "IT经理",
+      "status": "pending",
+      "notes": "",
+      "added_at": "2026-04-20T14:34:20.312924+00:00"
+    },
+    {
+      "job_url": "https://www.liepin.com/job/1981651387.shtml",
+      "company": "",
+      "title": "IT经理",
+      "status": "pending",
+      "notes": "",
+      "added_at": "2026-04-20T14:34:20.312929+00:00"
+    },
+    {
+      "job_url": "https://www.liepin.com/job/1981741519.shtml",
+      "company": "",
+      "title": "IT经理+双休",
+      "status": "pending",
+      "notes": "",
+      "added_at": "2026-04-20T14:34:20.312932+00:00"
+    },
+    {
+      "job_url": "https://www.liepin.com/job/1981655043.shtml",
+      "company": "",
+      "title": "IT经理",
+      "status": "pending",
+      "notes": "",
+      "added_at": "2026-04-20T14:34:20.312936+00:00"
+    },
+    {
+      "job_url": "https://www.liepin.com/job/1980731379.shtml",
+      "company": "",
+      "title": "IT经理",
+      "status": "pending",
+      "notes": "",
+      "added_at": "2026-04-20T14:34:20.312940+00:00"
+    },
+    {
+      "job_url": "https://www.liepin.com/job/1980944021.shtml",
+      "company": "",
+      "title": "IT经理",
+      "status": "pending",
+      "notes": "",
+      "added_at": "2026-04-20T14:34:20.312943+00:00"
+    },
+    {
+      "job_url": "https://www.liepin.com/job/1981780567.shtml",
+      "company": "",
+      "title": "IT经理+双休",
+      "status": "pending",
+      "notes": "",
+      "added_at": "2026-04-20T14:34:20.312946+00:00"
+    },
+    {
+      "job_url": "https://www.liepin.com/job/1981474913.shtml",
+      "company": "",
+      "title": "IT经理",
+      "status": "pending",
+      "notes": "",
+      "added_at": "2026-04-20T14:34:20.312949+00:00"
+    },
+    {
+      "job_url": "https://www.liepin.com/job/1981099963.shtml",
+      "company": "",
+      "title": "IT经理",
+      "status": "pending",
+      "notes": "",
+      "added_at": "2026-04-20T14:34:20.312952+00:00"
+    },
+    {
+      "job_url": "https://www.liepin.com/job/1981568697.shtml",
+      "company": "",
+      "title": "IT经理",
+      "status": "pending",
+      "notes": "",
+      "added_at": "2026-04-20T14:34:20.312955+00:00"
+    }
+  ]
+}
