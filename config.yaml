@@ -50,9 +50,6 @@ compression:
   threshold: 0.5
   target_ratio: 0.2
   protect_last_n: 20
-  summary_model: ''
-  summary_provider: auto
-  summary_base_url: null
 smart_model_routing:
   enabled: false
   max_simple_chars: 160
@@ -224,7 +221,7 @@ logging:
   backup_count: 3
 network:
   force_ipv4: true
-_config_version: 14
+_config_version: 17
 streaming:
   enabled: true
   transport: edit
