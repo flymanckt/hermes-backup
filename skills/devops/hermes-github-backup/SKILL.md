@@ -11,23 +11,28 @@ description: 把 ~/.hermes 目录备份到 GitHub，新电脑可 clone 后直接
 ## Core Problem
 `~/.hermes/` 通常 3-5GB，包含模型缓存（profiles/）、虚拟环境（venv/）、node_modules，直接上传会超过 GitHub 5GB 限制。
 
-## Upload Scope (48MB 级)
+## Upload Scope
 
 ### 上传
-- `memories/` — 记忆数据
+- `memories/` — 根级记忆数据
 - `skills/` — 技能目录
 - `hermes-agent/` — 主体代码（排除 venv/node_modules/__pycache__）
 - `recruitment/` — 招聘工具 + batches
-- `workspace/`、`scripts/`
+- `workspace/`、`scripts/`、`hindsight/`、`pastes/`、`platforms/`、`cron/`、`backups/`
+- `profiles/*/skills/` — 各 profile 的技能（用户积累的定制化 skill 配置）
+- `profiles/*/memories/` — 各 profile 的记忆数据
+- `profiles/*/plans/` — 各 profile 的计划数据
+- `profiles/*/SOUL.md` — 各 profile 的灵魂配置
 - 根目录：`config.yaml`、`SOUL.md`、`PROFILES.md`
 
 ### 不上传（运行时会自动生成/下载）
-- `profiles/` — 模型缓存（运行时会自动下载）
+- `profiles/*/home/` — 模型缓存（运行时会自动下载）
+- `profiles/*/sessions/`、`profiles/*/logs/`、`profiles/*/cache/` — 临时运行产物
 - `migration/` — 迁移遗留产物
 - `venv/`、`node_modules/`、`__pycache__/`
 - `.db-shm`、`.db-wal`、`state.db` — 数据库临时文件
-- `sessions/`、`checkpoints/` — 临时运行产物
-- `logs/`、`cache/`
+- `checkpoints/`、`logs/`、`cache/`（根级）
+- `sessions/`（根级）
 
 ## 操作步骤
 

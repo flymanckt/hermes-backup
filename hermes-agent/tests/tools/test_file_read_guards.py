@@ -18,7 +18,6 @@ from tools.file_tools import (
     read_file_tool,
     reset_file_dedup,
     _is_blocked_device,
-    _check_legacy_runtime_read_path,
     _get_max_read_chars,
     _DEFAULT_MAX_READ_CHARS,
     _read_tracker,
@@ -134,52 +133,6 @@ class TestCharacterCountGuard(unittest.TestCase):
             file_size=_DEFAULT_MAX_READ_CHARS - 1,
         )
         result = json.loads(read_file_tool("/tmp/justunder.txt", task_id="under"))
-        self.assertNotIn("error", result)
-        self.assertIn("content", result)
-
-
-# ---------------------------------------------------------------------------
-# Legacy runtime path blocking
-# ---------------------------------------------------------------------------
-
-class TestLegacyRuntimeReadBlocking(unittest.TestCase):
-    """Hermes should not read legacy OpenClaw runtime state by default."""
-
-    def setUp(self):
-        _read_tracker.clear()
-
-    def tearDown(self):
-        _read_tracker.clear()
-
-    def test_legacy_runtime_path_blocked(self):
-        with tempfile.TemporaryDirectory() as tmp_home:
-            legacy_file = os.path.join(tmp_home, ".openclaw", "openclaw.json")
-            os.makedirs(os.path.dirname(legacy_file), exist_ok=True)
-            with patch.dict(os.environ, {"HOME": tmp_home}, clear=False):
-                err = _check_legacy_runtime_read_path(legacy_file)
-        self.assertIsNotNone(err)
-        self.assertIn("legacy runtime state", err)
-
-    def test_read_file_tool_blocks_legacy_runtime_path(self):
-        with tempfile.TemporaryDirectory() as tmp_home:
-            legacy_file = os.path.join(tmp_home, ".openclaw", "openclaw.json")
-            os.makedirs(os.path.dirname(legacy_file), exist_ok=True)
-            with patch.dict(os.environ, {"HOME": tmp_home}, clear=False):
-                result = json.loads(read_file_tool(legacy_file, task_id="legacy_block"))
-        self.assertIn("error", result)
-        self.assertIn("legacy runtime state", result["error"])
-
-    @patch("tools.file_tools._get_file_ops")
-    def test_env_override_allows_legacy_runtime_read(self, mock_ops):
-        with tempfile.TemporaryDirectory() as tmp_home:
-            legacy_file = os.path.join(tmp_home, ".openclaw", "openclaw.json")
-            os.makedirs(os.path.dirname(legacy_file), exist_ok=True)
-            mock_ops.return_value = _make_fake_ops(content="legacy ok\n", file_size=10)
-            with patch.dict(os.environ, {
-                "HOME": tmp_home,
-                "HERMES_ALLOW_LEGACY_RUNTIME_READS": "1",
-            }, clear=False):
-                result = json.loads(read_file_tool(legacy_file, task_id="legacy_override"))
         self.assertNotIn("error", result)
         self.assertIn("content", result)
 

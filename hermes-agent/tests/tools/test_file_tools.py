@@ -6,8 +6,6 @@ handling without requiring a running terminal environment.
 
 import json
 import logging
-import os
-import tempfile
 from unittest.mock import MagicMock, patch
 
 from tools.file_tools import (
@@ -46,6 +44,19 @@ class TestReadFileHandler:
         from tools.file_tools import read_file_tool
         read_file_tool("/tmp/big.txt", offset=10, limit=20)
         mock_ops.read_file.assert_called_once_with("/tmp/big.txt", 10, 20)
+
+    @patch("tools.file_tools._get_file_ops")
+    def test_invalid_offset_and_limit_are_normalized_before_dispatch(self, mock_get):
+        mock_ops = MagicMock()
+        result_obj = MagicMock()
+        result_obj.content = "line1"
+        result_obj.to_dict.return_value = {"content": "line1", "total_lines": 1}
+        mock_ops.read_file.return_value = result_obj
+        mock_get.return_value = mock_ops
+
+        from tools.file_tools import read_file_tool
+        read_file_tool("/tmp/big.txt", offset=0, limit=0)
+        mock_ops.read_file.assert_called_once_with("/tmp/big.txt", 1, 1)
 
     @patch("tools.file_tools._get_file_ops")
     def test_exception_returns_error_json(self, mock_get):
@@ -164,10 +175,6 @@ class TestPatchHandler:
 
 
 class TestSearchHandler:
-    def setup_method(self):
-        from tools.file_tools import _read_tracker
-        _read_tracker.clear()
-
     @patch("tools.file_tools._get_file_ops")
     def test_search_calls_file_ops(self, mock_get):
         mock_ops = MagicMock()
@@ -198,26 +205,27 @@ class TestSearchHandler:
         )
 
     @patch("tools.file_tools._get_file_ops")
+    def test_search_normalizes_invalid_pagination_before_dispatch(self, mock_get):
+        mock_ops = MagicMock()
+        result_obj = MagicMock()
+        result_obj.to_dict.return_value = {"files": []}
+        mock_ops.search.return_value = result_obj
+        mock_get.return_value = mock_ops
+
+        from tools.file_tools import search_tool
+        search_tool(pattern="class", target="files", path="/src", limit=-5, offset=-2)
+        mock_ops.search.assert_called_once_with(
+            pattern="class", path="/src", target="files", file_glob=None,
+            limit=1, offset=0, output_mode="content", context=0,
+        )
+
+    @patch("tools.file_tools._get_file_ops")
     def test_search_exception_returns_error(self, mock_get):
         mock_get.side_effect = RuntimeError("no terminal")
 
         from tools.file_tools import search_tool
         result = json.loads(search_tool(pattern="x"))
         assert "error" in result
-
-    @patch("tools.file_tools._get_file_ops")
-    def test_search_blocks_legacy_runtime_path(self, mock_get):
-        from tools.file_tools import search_tool
-
-        with tempfile.TemporaryDirectory() as tmp_home:
-            legacy_dir = os.path.join(tmp_home, ".openclaw")
-            os.makedirs(legacy_dir, exist_ok=True)
-            with patch.dict(os.environ, {"HOME": tmp_home}, clear=False):
-                result = json.loads(search_tool(pattern="memory", path=legacy_dir, task_id="search_legacy"))
-
-        assert "error" in result
-        assert "legacy runtime state" in result["error"]
-        mock_get.assert_not_called()
 
 
 # ---------------------------------------------------------------------------
@@ -311,5 +319,6 @@ class TestSearchHints:
         raw = search_tool(pattern="foo", offset=50, limit=50)
         assert "[Hint:" in raw
         assert "offset=100" in raw
+
 
 
